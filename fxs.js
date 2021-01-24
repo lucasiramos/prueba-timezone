@@ -12,13 +12,13 @@ $(function(){
 	HoraArg = moment.tz(FechaEvento.format(), 'America/Buenos_Aires');
 
 	// Hora Usuario
-	HoraUsuario = moment.tz(FechaEvento.format(), 'America/Tegucigalpa');
+	HoraUsuario = moment.tz(FechaEvento.format(), ZonaUsuario);
 
 	htmlArg = HoraArg.format("DD/MM/YYYY HH:mm (ZZ)") + " | Zona horaria: America/Buenos_Aires"
 	$("#HoraArg").html(htmlArg)
 
-	htmlUsuario = HoraUsuario.format("DD/MM/YYYY HH:mm (ZZ)") + " | Zona horaria (Tegucigalpa): " + ZonaUsuario
+	htmlUsuario = HoraUsuario.format("DD/MM/YYYY HH:mm (ZZ)") + " | Zona horaria (detectada): " + ZonaUsuario
 	$("#HoraUsuario").html(htmlUsuario)	
 
-	console.log("v0.3")
+	console.log("v0.4")
 })
