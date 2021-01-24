@@ -9,16 +9,16 @@ $(function(){
 	FechaEvento.minute(15)
 
 	// Hora Argentina
-	HoraArg = moment.tz(FechaEvento.format("YYYY-MM-DD HH:mm:ss"), 'America/Buenos_Aires');
+	HoraArg = moment.tz(FechaEvento.format(), 'America/Buenos_Aires');
 
 	// Hora Usuario
-	HoraUsuario = moment.tz(FechaEvento.format("YYYY-MM-DD HH:mm:ss"), ZonaUsuario);
+	HoraUsuario = moment.tz(FechaEvento.format(), 'America/Tegucigalpa');
 
 	htmlArg = HoraArg.format("DD/MM/YYYY HH:mm (ZZ)") + " | Zona horaria: America/Buenos_Aires"
 	$("#HoraArg").html(htmlArg)
 
-	htmlUsuario = HoraUsuario.format("DD/MM/YYYY HH:mm (ZZ)") + " | Zona horaria (detectada): " + ZonaUsuario
+	htmlUsuario = HoraUsuario.format("DD/MM/YYYY HH:mm (ZZ)") + " | Zona horaria (Tegucigalpa): " + ZonaUsuario
 	$("#HoraUsuario").html(htmlUsuario)	
 
-	console.log("v0.2")
+	console.log("v0.3")
 })
